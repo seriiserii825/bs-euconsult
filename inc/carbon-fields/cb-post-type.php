@@ -96,6 +96,11 @@
 		Container::make( 'post_meta', __( 'Video' ) )
 		         ->where( 'post_type', '=', 'video' )
 		         ->add_fields( array(
+			         Field::make( 'radio', 'crb_video_aux', __( 'Choose auxiliar' ) )
+				         ->set_options( array(
+					         '1' => 'no',
+					         '2' => 'yes',
+				         ) ),
 			         Field::make( 'file', 'crb_video_file', __( 'Video File' ) )
 				         ->set_type( array( 'video' ) )
 				         ->set_value_type( 'url' )

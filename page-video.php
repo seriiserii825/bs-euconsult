@@ -33,9 +33,9 @@
                     <?php while($video->have_posts()): ?>
                         <?php $video->the_post(); ?>
 
-                        <video controls poster="https://html5book.ru/wp-content/themes/papercuts/video/martynko.png" preload="none">
-                            <source src="<?php echo carbon_get_the_post_meta('crb_video_file'); ?>" type="video/mp4">
-                        </video>
+<!--                        <video controls poster="https://html5book.ru/wp-content/themes/papercuts/video/martynko.png" preload="none">-->
+<!--                            <source src="--><?php //echo carbon_get_the_post_meta('crb_video_file'); ?><!--" type="video/mp4">-->
+<!--                        </video>-->
                     <?php endwhile; ?>
                     <?php else: ?>
                 <?php endif; ?>

@@ -283,4 +283,15 @@ jQuery(document).ready(function ($) {
 		});
 	};
 	disabelVideoBar();
+
+	let closeVideoPopup = function () {
+		$('.video-popup input[type="submit"]').on('click', function () {
+			setTimeout(function(){
+				$('.video-popup').fadeOut();
+				$('body').removeClass('fixed');
+			}, 3500);
+		});
+	};
+	closeVideoPopup();
+
 });

@@ -76,6 +76,11 @@
 	.partners__img {
 		padding: 0 10px;
 	}
+
+	.header__content .logo {
+		position: relative;
+		margin-right: 40px;
+	}
 }
 
 @media screen and (max-width: 380px) {

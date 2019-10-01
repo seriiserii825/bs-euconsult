@@ -20,6 +20,7 @@
 		wp_enqueue_script('bs-slick.min-js', get_template_directory_uri().'/assets/libs/slick/slick/slick.min.js', ['jquery'], null, true);
 		wp_enqueue_script('bs-mixitup.min-js', get_template_directory_uri().'/assets/libs/mixitup/mixitup.min.js', ['jquery'], null, true);
 		wp_enqueue_script('bs-main-js', get_template_directory_uri().'/assets/js/main.js', ['jquery'], null, true);
+		wp_enqueue_script('bs-video', get_template_directory_uri().'/assets/js/bs-video.js', array('flowplayer', 'jquery'), '0.1', true);
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
