@@ -4708,3 +4708,6 @@ p {
 .sidebar ul.list li .sublist a::after {
 	display: none;
 }
+.flowplayer .fp-timeline {
+	pointer-events: none;
+}
