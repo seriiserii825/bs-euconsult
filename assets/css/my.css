@@ -4711,3 +4711,12 @@ p {
 .flowplayer .fp-timeline {
 	pointer-events: none;
 }
+.authorization {
+	padding: 40px 0 200px;
+	font-size: 30px;
+	text-align: center;
+}
+.authorization a {
+	text-decoration: underline;
+	color: #fccc1c;
+}

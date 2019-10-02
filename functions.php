@@ -39,6 +39,42 @@ function bs_euconsult_content_width() {
 add_action( 'after_setup_theme', 'bs_euconsult_content_width', 0 );
 
 
+$result = add_role( 'vegetables', 'Vegetables',
+	array(
+		'read'         => true,  // true разрешает эту возможность
+	)
+);
+
+$result = add_role( 'pomicultura', 'Pomicultura',
+	array(
+		'read'         => true,  // true разрешает эту возможность
+	)
+);
+
+$result = add_role( 'viticultura', 'Viticultura',
+	array(
+		'read'         => true,  // true разрешает эту возможность
+	)
+);
+
+function login_redirect( $redirect_to, $request, $user ){
+//is there a user to check?
+	if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+		
+		// check for admins
+		if ( in_array( 'administrator', $user->roles ) ) {
+			// redirect them to the default place
+			return $redirect_to;
+		}
+		else {
+			return home_url('video-page/');
+		}
+	}
+	else {
+		return $redirect_to;
+	}
+}
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
 ///**
 // * Implement the Custom Header feature.
