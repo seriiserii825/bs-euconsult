@@ -141,6 +141,13 @@ function crb_attach_theme_options()
 			Field::make('text', 'crb_connect_text_en', __('Block connect_text en'))
 				->set_width(30),
 			
+			Field::make('text', 'crb_connect_video_text_ro', __('Block connect_video_text ro'))
+				->set_width(30),
+			Field::make('text', 'crb_connect_video_text_ru', __('Block connect_video_text ru'))
+				->set_width(30),
+			Field::make('text', 'crb_connect_video_text_en', __('Block connect_video_text en'))
+				->set_width(30),
+			
 			Field::make('text', 'crb_connect_phone', __('Block connect_phone'))
 		))
 		->add_tab(__('Numbers'), array(
@@ -313,6 +320,20 @@ function crb_attach_theme_options()
 				->set_width(30),
 			Field::make('text', 'crb_login_title_en', __('crb_login_title_en'))
 				->set_width(30),
+		))
+		->add_tab(__('Certificates'), array(
+			Field::make('complex', 'crb_certificates', __('Fields'))
+				->add_fields(array(
+					Field::make('text', 'crb_title_ro', __('crb_title_ro'))
+						->set_width(30),
+					Field::make('text', 'crb_title_ru', __('crb_title_ru'))
+						->set_width(30),
+					Field::make('text', 'crb_title_en', __('crb_title_en'))
+						->set_width(30),
+					
+					Field::make('image', 'crb_image', __('Image'))
+				))
+				->set_layout('tabbed-horizontal')
 		));
 	
 	// Add second options page under 'Basic Options'
